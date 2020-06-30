@@ -1,16 +1,27 @@
 package com.example.codeclan.fileCabinet.components;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.stereotype.Component;
-import sun.reflect.generics.repository.FieldRepository;
 
 @Component
 public class DataLoader implements ApplicationRunner {
 
     @Autowired
-    FileRepository fieldRepository;
+    FileRepository fileRepository;
 
     @Autowired
-    FolderRepository foldre
+    FolderRepository folderRepository;
+
+    @Autowired
+    UserRepository userRepository;
+
+    public DataLoader(){
+    }
+
+    @Override
+    public void run(ApplicationArguments args){
+
+    }
 }
