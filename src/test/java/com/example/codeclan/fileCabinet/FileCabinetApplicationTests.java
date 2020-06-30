@@ -1,5 +1,6 @@
 package com.example.codeclan.fileCabinet;
 
+import com.example.codeclan.fileCabinet.models.File;
 import com.example.codeclan.fileCabinet.models.Folder;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
@@ -26,10 +27,11 @@ public class FileCabinetApplicationTests {
 
 	@Test
 	public void createFileAndFolder(){
-		Folder folder new Folder("Accounts");
+		Folder folder new Folder("Accounts", "John");
 		folderRepository.save(folder);
 
-		File file1 = new File
+		File file1 = new File("Salaries", "pdf", 150, folder);
+		fileRepository.save(file1);
 	}
 
 

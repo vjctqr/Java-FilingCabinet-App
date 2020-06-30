@@ -26,6 +26,14 @@ public class File {
     public File(){
     }
 
+//    public  Long getId(){
+//        return id;
+//    }
+//
+//    public void setId(Long id) {
+//        this.id = id;
+//    }
+
     public String getName() {
         return name;
     }
@@ -51,7 +59,7 @@ public class File {
     }
 
     public Folder getFolder(){
-        this.size = size;
+        return folder;
     }
 
     public void setFolder(Folder folder) {
