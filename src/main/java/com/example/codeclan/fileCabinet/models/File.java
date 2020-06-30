@@ -20,7 +20,7 @@ public class File {
     private int size;
 
     @ManyToOne
-    @JoinColumns(name ="folder_id", nullable = false)
+    @JoinColumn(name = "folder_id", nullable = false)
     private Folder folder;
 
     public File(){
