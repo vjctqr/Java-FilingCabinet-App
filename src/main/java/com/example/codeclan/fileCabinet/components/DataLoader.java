@@ -32,7 +32,7 @@ public class DataLoader implements ApplicationRunner {
 
         File salaries = new File("Salaries", "pdf", 58, folder);
         fileRepository.save(salaries);
-        File expenses = new File("Expenses");
+        File expenses = new File("Expenses", "pdf", 98, folder);
         fileRepository.save(expenses);
 
 
