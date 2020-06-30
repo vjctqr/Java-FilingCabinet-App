@@ -2,6 +2,7 @@ package com.example.codeclan.fileCabinet.controllers;
 
 
 import com.example.codeclan.fileCabinet.models.File;
+import com.example.codeclan.fileCabinet.repositories.FileRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -10,7 +11,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 public class FileController {
@@ -24,8 +24,8 @@ public class FileController {
     }
 
 //    @GetMapping(value = "/files/{id}")
-//    public ResponseEntity<> getFile(@PathVariable Long id){
-//        return new ResponseEntity<>(fileRepository.findById(id), HttpStatus.OK)
+//    public ResponseEntity<File> getFile(@PathVariable Long id){
+//        return new ResponseEntity<>(fileRepository.findById(id), HttpStatus.OK);
 //    }
 
 

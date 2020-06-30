@@ -2,6 +2,8 @@ package com.example.codeclan.fileCabinet.components;
 
 import com.example.codeclan.fileCabinet.models.File;
 import com.example.codeclan.fileCabinet.models.Folder;
+import com.example.codeclan.fileCabinet.repositories.FileRepository;
+import com.example.codeclan.fileCabinet.repositories.FolderRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
@@ -16,8 +18,8 @@ public class DataLoader implements ApplicationRunner {
     @Autowired
     FolderRepository folderRepository;
 
-    @Autowired
-    UserRepository userRepository;
+//    @Autowired
+//    UserRepository userRepository;
 
     public DataLoader(){
     }
@@ -27,15 +29,13 @@ public class DataLoader implements ApplicationRunner {
 
         Folder accounts = new Folder("Accounts", "Johnny");
         folderRepository.save(accounts);
-        Folder legal = new Folder("Legal");
+        Folder legal = new Folder("Legal", "Jimmy");
         folderRepository.save(legal);
 
-        File salaries = new File("Salaries", "pdf", 58, folder);
+        File salaries = new File();
         fileRepository.save(salaries);
-        File expenses = new File("Expenses", "pdf", 98, folder);
+        File expenses = new File();
         fileRepository.save(expenses);
-
-
 
     }
 }

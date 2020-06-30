@@ -2,13 +2,16 @@ package com.example.codeclan.fileCabinet;
 
 import com.example.codeclan.fileCabinet.models.File;
 import com.example.codeclan.fileCabinet.models.Folder;
+import com.example.codeclan.fileCabinet.repositories.FileRepository;
+import com.example.codeclan.fileCabinet.repositories.FolderRepository;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit4.SpringRunner;
 
 
-@RunWith(StringRunner.class)
+@RunWith(SpringRunner.class)
 @SpringBootTest
 public class FileCabinetApplicationTests {
 
@@ -18,8 +21,8 @@ public class FileCabinetApplicationTests {
 	@Autowired
 	FolderRepository folderRepository;
 
-	@Autowired
-	UserRepository userRepository;
+//	@Autowired
+//	UserRepository userRepository;
 
 	@Test
 	void contextLoads() {
@@ -27,11 +30,11 @@ public class FileCabinetApplicationTests {
 
 	@Test
 	public void createFileAndFolder(){
-		Folder folder new Folder("Accounts", "John");
+		Folder folder = new Folder("Accounts", "John");
 		folderRepository.save(folder);
 
-		File file1 = new File("Salaries", "pdf", 150, folder);
-		fileRepository.save(file1);
+		File accounts = new File("Salaries", "pdf", 150, folder);
+		fileRepository.save(accounts);
 	}
 
 
